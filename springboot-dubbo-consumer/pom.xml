@@ -169,6 +169,17 @@
             <artifactId>mybatis-generator-core</artifactId>
             <version>${mybatis-generator-core.version}</version>
         </dependency>
+        <!-- dubbo -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-dubbo</artifactId>
+            <version>1.4.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mengka.cloud</groupId>
+            <artifactId>mengka-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>

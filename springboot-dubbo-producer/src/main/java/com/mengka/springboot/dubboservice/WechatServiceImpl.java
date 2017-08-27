@@ -1,4 +1,4 @@
-package com.mengka.springboot.service;
+package com.mengka.springboot.dubboservice;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.mengka.cloud.service.WechatService;

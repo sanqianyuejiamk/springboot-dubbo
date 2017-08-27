@@ -1,7 +1,8 @@
 package com.mengka.springboot.controller;
 
 import com.mengka.springboot.dao.persistence.BookDOMapper;
-import com.mengka.springboot.service.MengkaCloudWechatService;
+import com.mengka.springboot.service.MengkaCloudMcService;
+//import com.mengka.springboot.service.MengkaCloudWechatService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,9 @@ public class CommonController {
 //    @Autowired
 //    private MengkaCloudWechatService mengkaCloudWechatService;
 
+    @Autowired
+    private MengkaCloudMcService mengkaCloudMcService;
+
     @RequestMapping("/rate")
     public String product(Model model){
         log.info("freeMarkerController index......");
@@ -38,6 +42,11 @@ public class CommonController {
         log.info("freeMarkerController index......");
 
 //        mengkaCloudWechatService.helloworld();
+
+
+        String result = mengkaCloudMcService.helloworld();
+        log.info("result = {}",result);
+
         return "index2";
     }
 }

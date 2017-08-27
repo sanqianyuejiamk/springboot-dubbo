@@ -1,9 +1,12 @@
 package com.mengka.springboot;
 
+import com.mengka.cloud.proxy.EnableMengkaProxy;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
+import com.mengka.cloud.config.mcservice.BeanScannerConfigurer;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
@@ -15,7 +18,9 @@ import org.springframework.context.annotation.PropertySource;
  */
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan
+//@ComponentScan(basePackages = "com.mengka.cloud.config.mcservice")
+//@Import(BeanScannerConfigurer.class)
+@EnableMengkaProxy
 @PropertySource("classpath:/properties/datasource.properties")
 @ImportResource("classpath:/spring/applicationContext.xml")
 public class SpringBootMonitorStart {

@@ -9,16 +9,16 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2017/08/24.
  */
 @Slf4j
-@Service(version = "1.0.0")
+@Service(version = "1.0.0", group = "test", retries = 2)
 public class WechatServiceImpl implements WechatService {
 
     /**
-     *  发送微信消息
+     * 发送微信消息
      *
      * @param userId
      * @param content
      */
-    public void sendMessage(String userId,String content) {
-        log.info("WechatService sendMessage content = {}",content);
+    public void sendMessage(String userId, String content) {
+        log.info("WechatService sendMessage content = {}", content);
     }
 }

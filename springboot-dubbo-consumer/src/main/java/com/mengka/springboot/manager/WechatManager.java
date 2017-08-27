@@ -15,11 +15,11 @@ import java.util.Date;
 @Service
 public class WechatManager {
 
-    @Reference(version = "1.0.0")
+    @Reference(version = "1.0.0", group = "test", retries = 2)
     private WechatService wechatService;
 
-    public void sendMessage(){
-        wechatService.sendMessage("044101331","juse for test["+ TimeUtil.toDate(new Date(),TimeUtil.FORMAT_YYYY_MM_DD_HH_MM_SS));
+    public void sendMessage() {
+        wechatService.sendMessage("044101331", "juse for test[" + TimeUtil.toDate(new Date(), TimeUtil.FORMAT_YYYY_MM_DD_HH_MM_SS));
         log.info("WechatManager sendMessage.");
     }
 }

@@ -171,11 +171,15 @@
         </dependency>
         <!-- dubbo -->
         <!-- /Users/hyy044101331/work_github/work_spring_boot_starter_dubbo2 -->
+        <!--
+        /Users/hyy044101331/work_github/dubbo-spring-boot-project/dubbo-spring-boot-compatible/autoconfigure/src/main/java/org/apache/dubbo/spring/boot/autoconfigure
+        -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-dubbo</artifactId>
             <version>1.4.0.RELEASE</version>
         </dependency>
+        <!-- github/spring-cloud-mengka-common -->
         <dependency>
             <groupId>com.mengka.cloud</groupId>
             <artifactId>mengka-common</artifactId>
